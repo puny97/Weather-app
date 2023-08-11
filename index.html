@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weather App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap" rel="stylesheet">
+  <link href="site.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <main class="main-container">
+    <div class="location-and-search">
+      <div class="location-and-date">
+          <h1 class="location-and-date__location"><span id="cityName"></span></h1>
+          <div><span id="date"></span></div>
+      </div>
+      <div class="search">
+          <form class="form" role="search">
+              <input id="city" class="input" type="search" placeholder="Enter City Name">
+              <button class="btn" id="submit" type="submit">Search</button>
+          </form>
+      </div>
+  </div>
+
+
+    <div class="current-temperature">
+      <div class="current-temperature__icon-container">
+        <img src="/mostly-sunny.svg" class="current-temperature__icon" alt="">
+      </div>
+      <div class="current-temperature__content-container">
+        <div class="current-temperature__value"><span id="temp"></span><span>&deg;</span></div>
+        <div class="current-temperature__summary">Temperature</div>
+      </div>
+    </div>
+
+
+    <div class="current-stats">
+      <div>
+        <div class="current-stats__value"><span id="max_temp"></span><span>&deg;</span></div>
+        <div class="current-stats__label">High</div>
+        <div class="current-stats__value"><span id="min_temp"></span><span>&deg;</span></div>
+        <div class="current-stats__label">Low</div>
+      </div>
+      <div>
+        <div class="current-stats__value"><span id="wind_speed"></span><span>km/hr</span></div>
+        <div class="current-stats__label">Wind</div>
+        <div class="current-stats__value"><span id="wind_degrees"></span><span>&deg;</span></div>
+        <div class="current-stats__label">Wind Degrees</div>
+      </div>
+      <div>
+        <div class="current-stats__value"><span id="humidity"></span><span>&deg;</span></div>
+        <div class="current-stats__label">Humidity</div>
+        <div class="current-stats__value"><span id="feels_like"></span><span>&deg;</span></div>
+        <div class="current-stats__label">Feels Like</div>
+      </div>
+    </div>
+
+
+    <div class="next-5-days">
+      <h1 class="next-5-days__heading">Weather of Some Other Cities</h1>
+      <div class="next-5-days__container">
+
+        <div class="next-5-days__row">
+
+          <div class="next-5-days__date">
+            Nagpur
+          </div>
+
+          <div class="next-5-days__low">
+            <span id="nagpur_low"></span><span>&deg;</span>
+            <div class="next-5-days__label">Low</div>
+          </div>
+
+          <div class="next-5-days__high">
+            <span id="nagpur_high"></span><span>&deg;</span>
+            <div class="next-5-days__label">High</div>
+          </div>
+
+          <div class="next-5-days__rain">
+            <span id="nagpur_humidity"></span><span>&deg;</span>
+            <div class="next-5-days__label">Humidity</div>
+          </div>
+
+          <div class="next-5-days__wind">
+            <span id="nagpur_windspeed"></span><span>km/hr</span>
+            <div class="next-5-days__label">Wind Speed</div>
+          </div>
+
+        </div>
+        <div class="next-5-days__row">
+
+          <div class="next-5-days__date">
+            Lucknow
+          </div>
+
+          <div class="next-5-days__low">
+            <span id="lucknow_low"></span><span>&deg;</span>
+            <div class="next-5-days__label">Low</div>
+          </div>
+
+          <div class="next-5-days__high">
+            <span id="lucknow_high"></span><span>&deg;</span>
+            <div class="next-5-days__label">High</div>
+          </div>
+
+          <div class="next-5-days__rain">
+            <span id="lucknow_humidity"></span><span>&deg;</span>
+            <div class="next-5-days__label">Humidity</div>
+          </div>
+
+          <div class="next-5-days__wind">
+            <span id="lucknow_windspeed"></span><span>km/hr</span>
+            <div class="next-5-days__label">Wind Speed</div>
+          </div>
+
+        </div>
+        <div class="next-5-days__row">
+
+          <div class="next-5-days__date">
+            Mumbai
+          </div>
+
+          <div class="next-5-days__low">
+            <span id="mumbai_low"></span><span>&deg;</span>
+            <div class="next-5-days__label">Low</div>
+          </div>
+
+          <div class="next-5-days__high">
+            <span id="mumbai_high"></span><span>&deg;</span>
+            <div class="next-5-days__label">High</div>
+          </div>
+
+          <div class="next-5-days__rain">
+            <span id="mumbai_humidity"></span><span>&deg;</span>
+            <div class="next-5-days__label">Humidity</div>
+          </div>
+
+          <div class="next-5-days__wind">
+            <span id="mumbai_windspeed"></span><span>km/hr</span>
+            <div class="next-5-days__label">Wind Speed</div>
+          </div>
+
+        </div>
+        <div class="next-5-days__row">
+
+          <div class="next-5-days__date">
+            Delhi
+          </div>
+
+          <div class="next-5-days__low">
+            <span id="delhi_low"></span><span>&deg;</span>
+            <div class="next-5-days__label">Low</div>
+          </div>
+
+          <div class="next-5-days__high">
+            <span id="delhi_high"></span><span>&deg;</span>
+            <div class="next-5-days__label">High</div>
+          </div>
+
+          <div class="next-5-days__rain">
+            <span id="delhi_humidity"></span><span>&deg;</span>
+            <div class="next-5-days__label">Humidity</div>
+          </div>
+
+          <div class="next-5-days__wind">
+            <span id="delhi_windspeed"></span><span>km/hr</span>
+            <div class="next-5-days__label">Wind Speed</div>
+          </div>
+
+        </div>
+        <div class="next-5-days__row">
+
+          <div class="next-5-days__date">
+            Surat
+          </div>
+
+          <div class="next-5-days__low">
+            <span id="surat_low"></span><span>&deg;</span>
+            <div class="next-5-days__label">Low</div>
+          </div>
+
+          <div class="next-5-days__high">
+            <span id="surat_high"></span><span>&deg;</span>
+            <div class="next-5-days__label">High</div>
+          </div>
+
+          <div class="next-5-days__rain">
+            <span id="surat_humidity"></span><span>&deg;</span>
+            <div class="next-5-days__label">Humidity</div>
+          </div>
+
+          <div class="next-5-days__wind">
+            <span id="surat_windspeed"></span><span>km/hr</span>
+            <div class="next-5-days__label">Wind Speed</div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+<script src="./script.js"></script>
+</body>
+
+</html>
